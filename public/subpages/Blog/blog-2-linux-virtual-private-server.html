@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Blog 2</title>
+  <!-- Structure for website data -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=decive-width, initial scale=1.0">
+  <meta name="description" content="Portfolio Blog 2">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../../assets/style.css">
+  <link rel="icon" type="image/png" href="../../assets/icons/favicon.png">
+</head>
+
+<body>
+  <header>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../index.html">
+          <img class="brand-size" src="../../assets/icons/favicon.png" alt="Portfolio logo">
+        </a>
+        <button class="navbar-toggler new-cursor" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link left-block" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link left-block" href="../portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link left-block" href="../blog.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Project page information -->
+  <div class="container">
+    <article class="page-article-sizing">
+      <h3 class="heading-style">Linux Virtual Private Server</h3>
+      <img width="100%" height="auto" class="image-style" src="../../assets/images/blog-2-virtual-private-server.png"
+        alt="Image of a server room">
+      <p class="top-spacer">
+        Earlier these holidays, I bought a virtual private server (VPS) from IONOS. This
+        is effectively a computer in the cloud, but technically a portion of server 
+        resources that is virtualised to simulate an individual computer. I chose the 
+        Linux S plan which grants me a 2 vCore Processor (probably 2 threads of a CPU 
+        core from an Intel Xeon CPU), 2GB Memory, 80GB NVMe Storage. This costs about 
+        £4/month, and a setup fee, but has an offer to be discounted for the first few
+        months. It also features unlimited traffic with 1GB/second bandwidth, root 
+        access, and Plesk web host software.
+      </p>
+      <p>
+        I didn't quite know if I should get one or not, but I thought it would be fun to 
+        own one. With it, I could host my own website, or run types of scripts, back up
+        important media, or install software in an isolated, remote environment where I 
+        wouldn't ruin any operation of my home network or computer. Also, I wouldn't be 
+        paying directly for electricity costs which is a plus. I'm also learning a bit of
+        Linux as well to get more familiar with other operating systems than Windows. 
+        Speaking of operating system, I had initially installed Debian 12 Server, because 
+        I was messing around with a Raspberry Pi which is running Raspbian - a Linux distribution
+        based on Debian. I found it tricky to use as a beginner so I then looked searched around for
+        alternatives and apparently Ubuntu was more user-friendly as it has better software 
+        compatibility and community support from the jump. So, I installed Ubuntu Server 22.04 and 
+        it seemed to run fine.
+      </p>
+      <p>
+        Around this time (June) I wanted to get a Raspberry Pi enviro sensor and have this display on some
+        sort of Grafana dashboard or live data on a website which I could host on my VPS. Unfortunately, 
+        I think it was too complicated for me at this time - because it needed knowledge of MQTT, Node-Red, 
+        InfluxDB, and Grafana, but there was another method using Prometheus and Docker. Anyways I had just 
+        been confusing myself but knew there were other things I could set up instead right now. I was reading 
+        an article <a class="link-text" href="https://www.ukhost4u.com/9-things-can-do-with-vps/">
+        [https://www.ukhost4u.com/9-things-can-do-with-vps/]</a> and the last option caught my eye. Sharing 
+        server resources. This reminded me of a moment before the COVID pandemic and maybe when Bitcoin was 
+        becoming popular, when I heard about Folding@home. This is a distributed computing project, where tasks 
+        (work units) are assigned to clients (volunteer computers) running their software. Calculations are done
+        and sent back to their servers if completed within a deadline. The information is used to simulate 
+        protein folding and structure, to scientifically understand how they can function or malfunction inside
+        the human body. 
+      </p>
+      <p>
+        To start with, I looked on Wikipedia for popular volunteer distributed computing projects where I could provide some processing power for a good cause, and came across the World Community Grid. I just had to sign up. I figured that I would register for one at the moment and not many, so I still had resources for myself like to host a website with. 
+      </p>
+      <br />
+      <h5>Details</h5>
+      <h6>Author: Arbaaz Patwari</h6>
+      <h6>Published: </h6>
+    </article>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./assets/script.js"></script>
+</body>
+
+</html>

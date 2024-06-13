@@ -1,0 +1,463 @@
+/*Root selector styles for whole website*/
+:root {
+  --header-height: 3.5rem;
+
+  --backgroundDark: hsl(54, 6%,17%);
+  --backgroundLight: hsl(58, 12%, 83%);
+  --textDark: hsl(48, 0%, 14%);
+  --textLight: hsl(48, 3%, 87%);
+  --textHighlight: hsl(16, 100%, 66%);
+  --scrollbarColor: hsl(58, 9%, 54%);
+  --transparentLight: rgba(196, 196, 196, 0.5);
+  --transparentDark: rgb(72, 72, 72, 0.5);
+
+  --normal-font-size: 16px;
+  --normal-font-weight: 400;
+  --heading-font-weight: 600;
+}
+/*Specifying the custom font Open Sans for the website*/
+@font-face {
+  font-family: 'Open Sans';
+  src: url(./fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+/*Select all items in the HTML files*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/*CSS styles for an HTML page*/
+html {
+  height: 100%;
+  cursor: url(./icons/circle_white.png) 16 16, auto;
+  scroll-behavior: smooth;
+}
+/*CSS styles for the body tag on HTML page*/
+header {
+  font-family: 'Open Sans';
+  font-size: var(--normal-font-size);
+  font-weight: var(--normal-font-weight);
+}
+/*Styling for the body of each page*/
+body {
+  background-color: var(--backgroundDark);
+  font-family: 'Open Sans';
+  font-size: var(--normal-font-size);
+  font-weight: var(--normal-font-weight);
+  line-height: 1.5;
+  color: var(--textLight);
+  scrollbar-color: var(--backgroundDark) var(--backgroundLight);
+}
+/*Orange colour when highlighting text*/
+::selection {
+  background: var(--textHighlight);
+}
+/*Custom scrollbar width (Safari or Chrome uses webkit)*/
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+/*Custom scrollbar track for the height of the viewport*/
+::-webkit-scrollbar-track {
+  background: var(--backgroundDark);
+  border-left: 1px solid var(--backgroundLight);
+}
+/*Custom scrollbar thumb for the current page view*/
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbarColor);
+  border-radius: 6px;
+}
+/*Increase scrollbar width when hovering with cursor*/
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbarColor);
+  border-radius: 6px;
+  width: 0.6rem;
+}
+/*Decoration for anchor links*/
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: url(./icons/target_white.png) 16 16, pointer;
+}
+/*Styles for buttons*/
+button {
+  cursor: url(./icons/target_white.png) 16 16, pointer;
+}
+/*Styles for headings*/
+h1 h2 h3 {
+  font-weight: var(---font-weight);
+}
+/*Styles for navbar element*/
+nav {
+  list-style: none;
+  background-color: var(--transparentDark);
+}
+/*Navbar CSS class styles*/
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/*Navbar main icon sizing*/
+.brand-size {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+/*Navbar styles for contained elements*/
+.navbar-brand {
+  margin-left: 15vw;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+/*Navbar styles for page links*/
+.nav-link {
+  color: var(--textLight);
+}
+/*Navbar colouring text on hover*/
+.nav-link:hover {
+  color: var(--textDark);
+}
+/*Navbar link dot animation*/
+.left-block::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  background: var(--backgroundLight);
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  bottom: 2.5px;
+  right: 3px;
+  transition: width 90ms ease;
+}
+/*Navbar link animation finished*/
+.left-block:hover::before {
+  width: 6px;
+  height: 6px;
+}
+/*===Home Page Content===*/
+/*Main heading style for index page*/
+.main-heading {
+  position: relative;
+  display: block;
+  top: 60px;
+  left: 40px;
+  font-weight: var(--heading-font-weight);
+}
+/*Styling for the subheading*/
+.sub-heading {
+  position: relative;
+  display: block;
+  top: 60px;
+  left: 40px;
+  font-weight: var(--normal-font-weight);
+}
+/*Styling for my profile image*/
+.image-sizing {
+  position: relative;
+  display: block;
+  float: right;
+  width: 180px;
+  border: 2px solid silver;
+  border-radius: 8px;
+  top: -50px;
+}
+/*Styling to separate out divs*/
+.new-margin {
+  margin-top: 200px;
+}
+/*Styling for an image caption*/
+.caption-sizing {
+  position: relative;
+  display: block;
+  top: 22px;
+  left: 66px;
+  max-width: 26vw;
+  font-size: 12px;
+}
+/*Sizing for articles*/
+.article-sizing {
+  position: relative;
+  display: block;
+  top: 80px;
+  left: 34px;
+  padding: 10px;
+  max-width: 60%;
+  font-size: 18px;
+  padding: 5px;
+}
+/*Styling for the unordered list with external links*/
+.list-sizing {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  float: right;
+  margin-top: 32px;
+  left: 108px;
+  list-style: none;
+  padding: 5px;
+}
+/*Styling for social media links*/
+.social-link {
+  text-decoration: none;
+  color: var(--textLight);
+}
+/*Styling for social media icons*/
+.icon-sizing {
+  position: relative;
+  display: inline-block;
+  left: 20px;
+  bottom: 2px;
+}
+/*Position style for GitHub icon*/
+.github-icon {
+  position: relative;
+  left: 30px;
+}
+/*Position style for YouTube icon*/
+.youtube-icon {
+  position: relative;
+  left: 10px;
+ 
+}
+/*Style for a resume icon
+.resume-icon {
+  position: relative;
+  left: 23px;
+}
+*/
+/*Position information for block elements needing to be lower in the page view*/
+.push-down-item {
+  position: relative;
+  display: block;
+  top: 140px;
+}
+/*Position information for the email*/
+.bottom-text {
+  position: relative;
+  display: block;
+  left: 40px;
+  font-size: 18px;
+}
+/*Position style to move page content like articles below the navbar*/
+.top-setter {
+  position: relative;
+  top: 40px;
+}
+/*Styling for some links to wrap text in the article/ container neatly rather than chunkily*/
+.link-text {
+  color: var(--textLight);
+  word-break: break-all;
+}
+/*Style for hovering over traversable hyperlinks*/
+.link-text:hover {
+  color: var(--textDark);
+}
+/*Style to add a transition to the Bootstrap CSS card*/
+.card {
+  transition: transform 0.1s;
+}
+/*Style to increase the card size on mouse hover*/
+.card:hover {
+  transform: scale(1.01);
+}
+/*Style to color the text on cards for readability in normal (dark) theme*/
+.card-title, .card-text {
+  color: var(--textLight);
+}
+/*Style to change the color of a card background while keeping it of the same shade as the background (just
+changes opacity)*/
+.card-background {
+  background-color: var(--transparentDark);
+}
+/*Style to create a small dot next to traversable links for improved interaction and telegraphing*/
+.left-select::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background: var(--backgroundDark);
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  bottom: 2px;
+  right: 4px;
+  transition: width 90ms ease;
+}
+/*Navbar link animation finished*/
+.left-select:hover::before {
+  width: 6px;
+  height: 6px;
+}
+/*Badge styling
+.badge-style {
+  border: 1px solid var(--textLight);
+}
+*/
+/*Article styling to center and pad content*/
+.page-article-sizing {
+  position: relative;
+  display: block;
+  top: 40px;
+  background-color: var(--transparentDark);
+  border-radius: 8px;
+  width: 60vw;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*Heading style for articles*/
+.heading-style {
+  position: relative;
+  display: block;
+  top: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.left-setter {
+  left: 20px;
+}
+.top-spacer {
+  margin-top: 10px;
+ }
+ .image-style {
+  border-radius: 2px;
+  background-color: var(--backgroundLight);
+ }
+
+.bottom-spacer {
+  margin-bottom: 50px;
+}
+.revert-break {
+  word-break: normal;
+}
+.carousel-text {
+  color: var(--textDark);
+  font-style: italic;
+  position: relative;
+  top: 46px;
+  text-align: center;
+}
+.carousel-button:hover {
+  cursor: url(./icons/target_black.png) 16 16, pointer;
+}
+.carousel-hover-normal {
+  cursor: url(./icons/circle_black.png) 16 16, auto;
+}
+.carousel-image {
+  max-height: 370px;
+}
+.blog-list {
+  list-style: none;
+  margin-left: -32px;
+}
+.blog-date {
+  position: relative;
+  display: block;
+  float: right;
+}
+/*
+.blog-subheading {
+  text-align: center;
+}
+*/
+.blog-article-separate {
+  margin-top: 5px;
+}
+.blog-badge {
+  position: relative;
+  left: 5px;
+}
+
+/*Extra styling to correct list movement on the page (too far right)*/
+@media screen and (max-width: 990px) {
+  .list-sizing {
+    position: relative;
+    display: block;
+    float: right;
+    margin-right: 170px;
+    bottom: 86px;
+  }
+}
+
+/*Media Screen for changing elements based on screen width*/
+@media screen and (max-width: 768px) {
+  
+  .navbar-brand {
+    position: relative;
+    margin-left: 0px;
+  }
+  button.navbar-toggler.new-cursor {
+  cursor: url(./icons/target_white.png) 16 16, pointer;
+  }
+  .main-heading {
+    top: 20px;
+    left: 10px;
+    font-size: 24px;
+  }
+  .sub-heading {
+    top: 20px;
+    left: 10px;
+    font-size: 18px;
+  }
+  .image-sizing {
+    width: 100px;
+    right: 20px;
+  }
+  .caption-sizing {
+    left: 26px;
+    max-width: 40vw;
+    font-size: 10px;
+  }
+  .article-sizing {
+    position: relative;
+    display: block;
+    font-size: 12px;
+    left: 4px;
+    top: 60px;
+    max-width: 65%;
+  }
+  .list-sizing {
+    position: relative;
+    display: block;
+    float: right;
+    font-size: 12px;
+    margin-right: 140px;
+    top: -100px;
+  }
+  .icon-sizing {
+    width: 20px;
+    height: 20px;
+  }
+  .github-icon {
+    position: relative;
+    left: 28px;
+  }
+  .youtube-icon {
+    position: relative;
+    left: 18px;
+  }
+  .push-down-item {
+    position: relative;
+    display: block;
+    top: 100px;
+  }
+  .bottom-text {
+    position: relative;
+    display: block;
+    font-size: 12px;
+    left: 10px;
+    bottom: 50px; 
+    max-width: 65%;
+  }
+  .top-setter {
+    top: 24px;
+  }
+  .page-article-sizing {
+    width: 90%;
+    top: 24px;
+  }
+
+}
